@@ -11,14 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
   m_Name: ModConfig
   m_EditorClassIdentifier: 
-  id: LetterModule
+  id: ModuleLetter
   title: A letter
   author: me
-  description: 'Press the correct letters at very precise times whilst making sure
-    that you don''t go too fast
+  description: 'Press the correct letters at precise times whilst not going too fast.
 
 
-    Manual can be found in the manuals folder'
+    Manual can be found in the manuals folder
+
+
+
+    If there are bugs, contact gnome#0598'
   version: 
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 1808245aa9f60a146b3ae97395b75f4b, type: 3}
