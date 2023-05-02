@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: ModConfig
   m_EditorClassIdentifier: 
   id: ModuleLetter
-  title: A letter
+  title: A Letter
   author: me
   description: 'Press the correct letters at precise times whilst not going too fast.
 
