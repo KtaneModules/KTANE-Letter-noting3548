@@ -14,16 +14,9 @@ MonoBehaviour:
   id: ModuleLetter
   title: A Letter
   author: me
-  description: 'Press the correct letters at precise times whilst not going too fast.
-
-
-    Manual can be found in the games folder
-
-
-
-    If there are bugs, contact gnome#0598 on discord.
-
-    (Note that this is not the main steam accout.) '
+  description: "Press the correct letters at precise times whilst not going too fast.\n\nManual
+    can be found in the games folder or ktane.timwi.de\n\n\nIf there are bugs, contact
+    gnome#0598 on discord.\n(Note that this is not the main steam account.) \n"
   version: 
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 1808245aa9f60a146b3ae97395b75f4b, type: 3}

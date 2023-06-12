@@ -13,6 +13,7 @@ public class Letter : MonoBehaviour {
     public KMBombInfo Bomb;
     public KMAudio Audio;
 
+
     static int ModuleIdCounter = 1;
     int ModuleId;
     private bool ModuleSolved;
@@ -31,8 +32,8 @@ public class Letter : MonoBehaviour {
 
     }
     const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    static string ChangingAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    static string LetterList = "";
+    string ChangingAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+     string LetterList = "";
 
     internal void ChangeLetterInternal(int i) {
 
@@ -43,9 +44,9 @@ public class Letter : MonoBehaviour {
         Debug.Log("ChangingAlphabet is now " + ChangingAlphabet);
 
     }
-    private static int Checker;
+    private int Checker;
 
-    private static bool IsBePressed;
+    private bool IsBePressed;
     private bool x = false;
     private bool ButtonPressed = false;
     private bool WaitedSeconds;
@@ -92,6 +93,7 @@ public class Letter : MonoBehaviour {
             yield return new WaitUntil(() => (ButtonPressed ==true)||(WaitedSeconds==true));
             
             if ((IsBePressed != ButtonPressed)&&(Striked!=true)) {
+                Debug.LogFormat("[A Letter #{0}] Incorrect on letter {1}", ModuleId, LetterList[p]);
                 Debug.Log("INCORRECT");
                 Debug.Log("Incorrect on stage" +p);
                 Debug.Log("Incorrect on letter"+ LetterList[p]);
@@ -134,8 +136,8 @@ public class Letter : MonoBehaviour {
         Debug.Log("Have waited");
         if (nl==Checker) 
         WaitedSeconds = true;
+        GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
 
-     
 
     }
 
@@ -227,6 +229,7 @@ public class Letter : MonoBehaviour {
         }
 
         Debug.Log("Submit sequence is now " + LetterList);
+        Debug.LogFormat("[A Letter #{0}] Submit sequence is now {1}", ModuleId,LetterList);
         Started = false;
 
     }
@@ -252,7 +255,6 @@ public class Letter : MonoBehaviour {
 
   
     void Start () {
-
         ModuleReset();
         Started = false;
 

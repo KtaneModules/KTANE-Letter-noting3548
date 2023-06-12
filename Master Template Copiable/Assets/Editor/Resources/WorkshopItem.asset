@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: WorkshopItem
   m_EditorClassIdentifier: 
   WorkshopPublishedFileID: 2969516781
-  Title: Letter
+  Title: A Letter
   Tags:
   - Regular Module
