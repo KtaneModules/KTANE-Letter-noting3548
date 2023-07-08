@@ -134,9 +134,12 @@ public class Letter : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
 
         Debug.Log("Have waited");
-        if (nl==Checker) 
-        WaitedSeconds = true;
-        GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+        
+        if (nl == Checker)
+        {
+                WaitedSeconds = true;
+                GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+        }
 
 
     }
